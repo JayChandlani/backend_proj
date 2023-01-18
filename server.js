@@ -12,18 +12,20 @@ app.use(morgan('tiny'));
 app.use(bodyparser.urlencoded({ extended: true }));
 
 // set viewingine
-app.set('view engine','ejs')
+app.set('view engine', 'ejs')
 
 // load assets 
-app.use('/css',express.static(path.resolve(__dirname,'assets/css')))
-app.use('/img',express.static(path.resolve(__dirname,'assets/img')))
-app.use('/js',express.static(path.resolve(__dirname,'assets/js')))
+app.use('/css', express.static(path.resolve(__dirname, 'assets/css')))
+// app.use('/img', express.static(path.resolve(__dirname, 'assets/img')))
+// app.use('/js', express.static(path.resolve(__dirname, 'assets/js')))
 
 
 app.get('/', (req, res) => {
-res.send('Hello Jay Chandlani')
+    res.render('pages/index')
 })
-
+app.get('/add-user', (req, res) => {
+    res.render('pages/add_user')
+})
 app.listen(PORT, () => {
     console.log('Server Running on Port ' + PORT);
 })

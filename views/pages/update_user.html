@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <Header> -->
+    <header id="head">
+        <nav>
+            <div class=" bg-slate-700  text-white p-3 text-lg">
+                <a href="/">User Management System</a>
+            </div>
+        </nav>
+    </header>
+    <!-- </Header> -->
+
+    <!-- <Main Site> -->
+    <main id="main-site">
+        <div class="p-4 m-10">
+            <a href="" class="text-slate-700 rounded-md p-2 hover:text-slate-400 space-x-1 ">
+                <i class="fa-solid fa-backward"></i>
+                <span>All User</span>
+            </a>
+        </div>
+        <div class="flex justify-center items-center w-full">
+            <div class="w-1/2 bg-white rounded shadow-2xl p-8 m-4">
+                <h1 class="block w-full text-center text-gray-800 text-2xl font-bold mb-6">Update User</h1>
+                <form action="/" method="post">
+                    <div class="flex flex-col mb-4">
+                        <label class="mb-2 font-bold text-lg text-gray-900" for="first_name">Name</label>
+                        <input class="border py-2 px-3 text-grey-800" type="text" name="first_name" id="first_name">
+                    </div>
+                    <div class="flex flex-col mb-4">
+                        <label class="mb-2 font-bold text-lg text-gray-900" for="email">Email</label>
+                        <input class="border py-2 px-3 text-grey-800" type="email" name="email" id="email">
+                    </div>
+                    <div class="flex mb-4 space-x-10">
+                        <label class="mb-2 font-bold text-lg text-gray-900" for="">Gender</label>
+                        <div>
+                            <label class="mb-2 text-lg text-gray-900" for="gender">Male</label>
+                            <input class="border py-2 px-3 text-grey-800" type="radio" name="gender" value="male">
+                        </div>
+                        <div>
+                            <label class="mb-2  text-lg text-gray-900" for="gender">Female</label>
+                            <input class="border py-2 px-3 text-grey-800" type="radio" name="gender" value="female">
+                        </div>
+                    </div>
+                    <div class="flex mb-4 space-x-10">
+                        <label class="mb-2 font-bold text-lg text-gray-900" for="">Status</label>
+                        <div>
+                            <label class="mb-2 text-lg text-gray-900" for="status">Active</label>
+                            <input class="border py-2 px-3 text-grey-800" type="radio" name="status" value="active">
+                        </div>
+                        <div>
+                            <label class="mb-2  text-lg text-gray-900" for="status">Inactive</label>
+                            <input class="border py-2 px-3 text-grey-800" type="radio" name="status" value="inactive">
+                        </div>
+                    </div>
+                    <button class="block bg-teal-400 hover:bg-teal-600 text-white uppercase text-lg mx-auto p-2 rounded"
+                        type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- </Main Site> -->
+    <script src="https://kit.fontawesome.com/51fc6cc36b.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
