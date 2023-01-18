@@ -26,6 +26,9 @@ app.get('/', (req, res) => {
 app.get('/add-user', (req, res) => {
     res.render('pages/add_user')
 })
+app.get('/update', (req, res) => {
+    res.render('pages/update_user')
+})
 app.listen(PORT, () => {
     console.log('Server Running on Port ' + PORT);
 })
