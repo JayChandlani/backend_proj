@@ -7,7 +7,10 @@ const app = express();
 const path = require('path')
 const PORT = process.env.PORT || 8080;
 const connectDB = require('./server/database/connection')
+const cors = require('cors');
 
+// setting origen 
+app.use(cors({origin:"http://localhost:3000"}))
 // log requests
 app.use(morgan('tiny'));
 connectDB();
@@ -20,7 +23,7 @@ app.set('view engine', 'ejs')
 // load assets 
 app.use('/css', express.static(path.resolve(__dirname, 'assets/css')))
 // app.use('/img', express.static(path.resolve(__dirname, 'assets/img')))
-// app.use('/js', express.static(path.resolve(__dirname, 'assets/js')))
+app.use('/js', express.static(path.resolve(__dirname, 'assets/js')))
 
 
 // importing routes from router file 

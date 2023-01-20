@@ -1,5 +1,5 @@
 <!-- <Header> -->
-    <%- include('../partials/_head') %>
+<%- include('../partials/_head') %>
     <!-- </Header> -->
 
     <!-- <Main Site> -->
@@ -13,7 +13,9 @@
         <div class="flex justify-center items-center w-full">
             <div class="w-1/2 bg-white rounded shadow-2xl p-8 m-4">
                 <h1 class="block w-full text-center text-gray-800 text-2xl font-bold mb-6">Update User</h1>
-                <%- include('../partials/_form') %>
+                <form method="put" id="update-but" >
+                    <%- include('../partials/_form') %>
+                </form>
             </div>
         </div>
     </main>
