@@ -19,8 +19,9 @@ $('#update-but').submit(e => {
 });
 
 if (window.location.pathname == '/') {
-    $('.delete').click(() => {
-        let id = $('.delete').attr('data-id');
+    const onedelete = $('.table tbody td a.delete')
+    onedelete.click(function () {
+        let id = $(this).attr('data-id');
         var req = {
             'url': `/api/users/${id}`,
             'method': 'DELETE'
