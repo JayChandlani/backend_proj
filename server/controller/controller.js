@@ -15,7 +15,7 @@ exports.create = (req, res) => {
     })
     user
         .save(user)
-        .then(data => res.redirect('/') )
+        .then(data => res.redirect('/'))
         .catch(err => res.status(500).send({ message: err.message || "Some error occured while createing user" }))
 }
 
@@ -31,13 +31,12 @@ exports.find = (req, res) => {
                     res.status(404).send({ message: "could not find user with id " + id })
                 } else {
                     res.send(data)
-                    console.log(data);
                 }
             })
             .catch(err => res.status(500).send({ message: "Error fetching user" }))
     } else {
         Userdb.find()
-            .then(data => res.send(data))
+            .then(data => { res.send(data) })
             .catch(err => res.status(500).send({ message: err.message || "Some error occured while createing user" }))
     }
 
@@ -51,7 +50,6 @@ exports.update = (req, res) => {
         return res.status(400).send({ message: "Data to update cannot be empty" })
     }
     const id = req.params.id;
-
     Userdb.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
         .then(data => {
             if (!data) {
